@@ -15,30 +15,58 @@
 <body>
 
     <main>
-        
-        <select id="head-dropdown">
-            <option value="bird-head">Bird Head</option>
-            <option value="horse-head">Horse Head</option>
-            <option value="duck-head">duck head</option>
-        </select>
-<div id="head"></div>
-
-<select id="middle-dropdown">
-    <option value="dress-middle">Dress</option>
-    <option value="pink-middle">Pink</option>
-    <option value="red-middle">Red</option>
-</select>
-<div id="middle"></div>
-
-<select id="bottom-dropdown">
-    <option value="blue-pants">Blue Pants</option>
-    <option value="dog-pants">Dogs Pants</option>
-    <option value="leg-pants">Leg Pants</option>
-</select>
-<div id="bottom"></div>
-
-<p id="catchphrasesEl"></p>
-
+        <div class="left">
+            <div class="picker">
+                <label>
+                    Head
+                    <select id="head-dropdown">
+                        <option value="bird">Bird</option>
+                        <option value="duck">Duck</option>
+                        <option value="dog">Dog</option>
+                        <option value="horse">Horse</option>
+                    </select>
+                </label>
+                <label>
+                    Middle
+                    <select id="middle-dropdown">
+                        <option value="blue">Blue</option>
+                        <option value="dress">Fancy</option>
+                        <option value="pink">Pink</option>
+                        <option value="red">Red</option>
+                    </select>
+                </label>
+                <label>
+                    Bottom
+                    <select id="bottom-dropdown">
+                        <option value="leg">Single Leg</option>
+                        <option value="white">White Pants</option>
+                        <option value="blue">Blue Jeans</option>
+                    </select>
+                </label>
+                <label>
+                    Add a catch phrase
+                    <input id="catchphrase-input" />
+                    <button id="catchphrase-button">Add</button>
+                </label>
+            </div>
+            <div id="stats">
+                <p id="report"></p>
+                <div id="catchphrases">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="character">
+                <div class="bg head" id="head">
+                </div>
+                <div class="bg middle" id="middle">
+                </div>
+                <div class="bg bottom" id="bottom">
+                </div>
+            </div>
+            
+        </div>
     </main>
     <script type="module" src="./app.js"></script>
 </body>
