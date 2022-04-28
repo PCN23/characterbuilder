@@ -1,1 +1,8 @@
 /* add home page styles here */
+
+#animal {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    /* background-image: url(); */
+}
