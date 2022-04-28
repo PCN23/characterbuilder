@@ -15,7 +15,7 @@ let head = 0;
 let middle = 0;
 let bottom = 0;
 // set state for all of the character's catchphrases
-let catchphrase = [];
+let catchphrases = [];
 
 headDropdown.addEventListener('change', () => {
     console.log('changing select', headDropdown.value);
@@ -31,6 +31,7 @@ headDropdown.addEventListener('change', () => {
 middleDropdown.addEventListener('change', () => {
     console.log('changing select', middleDropdown.value);
     middle++;
+    console.log(middle);
     middleEl.style.backgroundImage = `url('./assets/${middleDropdown.value}-middle.png')`; 
     displayStats();   
 });
@@ -45,14 +46,14 @@ bottomDropdown.addEventListener('change', () => {
 
 catchphraseButton.addEventListener('click', () => {
     const newCatchphrase = catchphraseInput.value;
-    catchphrase.push(newCatchphrase);
+    catchphrases.push(newCatchphrase);
     catchphraseInput.value = '';
     displayCatchphrases();
 });
 
 function displayStats() {
     // text content of the reportEl to tell the user how many times they've changed each piece of the state
-    reportEl.textContent = `You have changed the ${head.value} times, the ${middle.value} times and the ${bottom} times.`;
+    reportEl.textContent = `You have changed the head ${head} times, the middle ${middle} times and the bottom ${bottom} times.`;
 }
 
 function displayCatchphrases() {
@@ -60,9 +61,9 @@ function displayCatchphrases() {
     catchphrasesEl.textContent = '';
     // loop through each catchphrase in state
     for (let catchphrase of catchphrases) {
-        const  = document.createElement('p');
+        const p = document.createElement('p');
         p.classList.add ('catchphrase');
-        p.textContent = catchphrases;
+        p.textContent = catchphrase;
 
         catchphrasesEl.append(p);
     }
